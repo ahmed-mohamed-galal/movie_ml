@@ -1,4 +1,4 @@
-
+from tensorflow.keras.models import load_model
 import streamlit as st
 import pandas as pd 
 import numpy as np
@@ -139,5 +139,5 @@ def get_input():
     
 test = get_input()
     
-pl = joblib.load('vv9.h5')
+pl = load_model('vv9.h5')
 st.write(pl.predict(test))
